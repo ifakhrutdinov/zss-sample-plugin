@@ -1,0 +1,6 @@
+[submodule "deps/zowe-common-c"]
+	path = deps/zowe-common-c
+	url = git@github.com:zowe/zowe-common-c.git
+[submodule "deps/zss"]
+	path = deps/zss
+	url = git@github.com:zowe/zss.git

@@ -1,0 +1,18 @@
+{
+  "identifier": "org.zowe.zsssample",
+  "apiVersion": "1.0.0",
+  "pluginVersion": "1.0.0",
+  "pluginType": "library",
+  "dataServices": [
+    {
+      "type": "service",
+      "name": "sample",
+      "initializerLookupMethod": "external",
+      "initializerName": "zssSamplePluginServiceInstaller",
+      "libraryName": "zssSamplePlugin.so",
+      "methods": ["POST"],
+      "version": "1.0.0"
+    }
+  ]
+}
+
