@@ -41,13 +41,21 @@ git clone --recursive git@github.com:ifakhrutdinov/zss-sample-plugin.git
 ### Building and deploying the ZIS plug-in:
   * Go to the build directory in zisServer/build
   * Run build.sh (**WARNING: the SDUMPX call is made only when compiled with ZSS_SAMPLE_PLUGIN_SDUMPX_ENABLED**)
-  * Copy zisServer/lib/zwesdplg to your server's STEPLIB dataset
+  * Copy the ZIS plugin load module to your server's STEPLIB dataset
   ```
-  cp -X zwessmpl "//'USR.LOADLIB'"
+  cp -X zisServer/lib/zwessmpl "//'USR.LOADLIB'"
+  ```
+  * Copy the AUX guest module to your server's STEPLIB dataset
+  ```
+  cp -X zisServer/lib/zwessmpa "//'USR.LOADLIB'"
   ```
   * Add the following like to your server's PARMLIB member
   ```
   ZWES.PLUGIN.ZSMP=ZWESSMPL
+  ```
+  * If you use a custom AUX server STC, add the following like to your server's PARMLIB member
+  ```
+ZSMP.AUXNAME=your-aux-stc-name
   ```
   * Restart the cross-memory server
 
